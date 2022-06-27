@@ -101,7 +101,7 @@ export default class Authorize extends BaseAuthorize<SysRole, SysAuthority> {
     findAuthorityApis() {
         this.tableLoading = true;
         this.sysAuthorityService
-            .fetchAuthorityApis()
+            .fetchAll()
             .then((result) => {
                 this.tableLoading = false;
                 this.tableItems = result.data;
