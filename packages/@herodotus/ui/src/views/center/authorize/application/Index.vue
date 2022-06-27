@@ -136,8 +136,8 @@ export default class Index extends BaseIndex<OAuth2Application> {
         return this.styleSwitcher(grantType, 'text');
     }
 
-    durationConvert(data: string): string {
-        return this.$lib.moment.duration(data).humanize();
+    durationConvert(data: number): string {
+        return this.$lib.moment.duration(data, 'seconds').humanize();
     }
 }
 </script>

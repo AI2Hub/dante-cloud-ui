@@ -17,9 +17,10 @@ export interface OAuth2Application extends BaseSysEntity {
     requireProofKey: boolean;
     requireAuthorizationConsent: boolean;
     jwkSetUrl: string;
-    accessTokenValidity: string;
+    accessTokenValidity: number;
     reuseRefreshTokens: boolean;
-    refreshTokenValidity: string;
+    refreshTokenValidity: number;
+    yarn;
     signature: number | EmptyObject;
     clientSecretExpiresAt: string;
     authenticationSigningAlgorithm: number | EmptyObject;

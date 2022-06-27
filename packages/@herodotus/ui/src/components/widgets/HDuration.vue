@@ -28,7 +28,7 @@ import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HDuration extends Vue {
-    @Prop(String) value!: string;
+    @Prop(Number) value!: number;
     @Prop({ type: String, default: '设置时间周期' }) readonly label?: string;
 
     items = [
@@ -42,7 +42,7 @@ export default class HDuration extends Vue {
     unit = '';
 
     @Watch('value', { immediate: true })
-    onValueChange(newValue: string) {
+    onValueChange(newValue: number) {
         this.durationToData(newValue);
     }
 
@@ -56,7 +56,7 @@ export default class HDuration extends Vue {
         this.dataToDuration(this.amount, newValue);
     }
 
-    private durationToData(value: string) {
+    private durationToData(value: number) {
         let duration = this.$lib.moment.duration(value);
         if (duration && duration._data) {
             for (let item in duration._data) {
