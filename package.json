@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "commit": "git add . && git status && git-cz",
-    "push": "pnpm run commit && git push --set-upstream origin develop",
+    "push": "pnpm run commit && git push --set-upstream origin reactive-develop",
     "dev": "pnpm run --filter=@dante/ui dev",
     "prod": "pnpm run --filter=@dante/ui prod",
     "shared:build": "pnpm -r --filter=@herodotus/* run build"
@@ -40,10 +40,10 @@
     "@changesets/cli": "^2.27.1",
     "@quasar/vite-plugin": "^1.6.0",
     "@types/lodash-es": "^4.17.12",
-    "@types/node": "^20.11.20",
-    "@types/qs": "^6.9.11",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
+    "@types/node": "^20.11.21",
+    "@types/qs": "^6.9.12",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "commitizen": "^4.3.0",
     "cross-env": "^7.0.3",
